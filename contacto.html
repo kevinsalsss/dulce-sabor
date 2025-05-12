@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contacto | Dulce Sabor</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Contacto - Dulce Sabor</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+      </header>
+
+      <main>
+        <section class="formulario-contacto">
+          <h2>¡Queremos saber de ti!</h2>
+          <p>Por favor, completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.</p>
+
+          <form action="enviar_formulario.php" method="POST">
+            <!-- Campo de Nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+
+            <!-- Campo de Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Tu email" />
+
+            <!-- Campo de Tipo de Pastel -->
+            <label for="tipo_pastel">Tipo de Pastel:</label>
+            <select id="tipo_pastel" name="tipo_pastel">
+              <option value="chocolate">Pastel de Chocolate</option>
+              <option value="fresa">Pastel de Fresa</option>
+              <option value="vainilla">Pastel de Vainilla</option>
+              <option value="limon">Pastel de Limón</option>
+              <option value="red_velvet">Pastel Red Velvet</option>
+              <option value="cafe">Pastel de Café</option>
+            </select>
+
+            <!-- Campo de Comentarios -->
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus comentarios o preguntas aquí..."></textarea>
+
+            <!-- Campo de Aceptación de Términos -->
+            <label>
+              <input type="checkbox" id="terminos" name="terminos" required />
+              Acepto los <a href="#">términos y condiciones</a>
+            </label>
+
+            <!-- Botón de Enviar -->
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <p> © Kevin Salas | Visítanos y endulza tu día 🍰  </p>
+      </footer>
+    </div>
+  </body>
+</html>
