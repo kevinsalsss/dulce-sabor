@@ -1,20 +1,209 @@
 /* estilos.css - Estilos base para Dulce Sabor */
-
+/* General */
 body {
-    background-color: #fff8f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #4b2e2e;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
 }
 
+/* Container general */
 .container {
-    width: 900px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-header, footer {
-    background-color: #f4d3c2;
-    padding: 1em;
-    margin-bottom: 1em;
+/* Header */
+header {
+  background-color: #ff8c00;
+  padding: 20px;
+  text-align: center;
+  color: white;
 }
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none; 
+}
+
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #fffbe6; 
+}
+/* Main Section */
+main {
+  padding: 40px 0;
+}
+
+h2, h3 {
+  font-size: 1.8em;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Productos Tienda */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+
+.producto p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.producto strong {
+  font-size: 1.2em;
+  color: #ff8c00;
+}
+
+/* Estilo para formulario de contacto */
+.formulario-contacto {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.formulario-contacto button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff8c00;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+  background-color: #e07b00;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1em;
+  margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .producto {
+    padding: 15px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .formulario-contacto {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+}
+.imagen-portada {
+  display: block;
+  margin: 0 auto 30px auto; 
+  width: 30%; 
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease;
